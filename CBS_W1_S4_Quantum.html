@@ -18,16 +18,16 @@
   --font:'DM Sans',system-ui,sans-serif;--mono:'DM Mono',monospace
 }
 .reveal{font-family:var(--font);color:var(--c-white)}
-.reveal .slide-background{background:var(--c-bg)!important}
+.reveal .slide-background{background:var(--c-bg)}
 .reveal h1,.reveal h2,.reveal h3{font-family:var(--font);color:var(--c-white);font-weight:700;text-transform:none;letter-spacing:-0.02em;margin-top:0}
 .reveal h1{font-size:2.4em;line-height:1.1}
 .reveal h2{font-size:2.0em;line-height:1.1}
 .reveal h3{font-size:1.5em;line-height:1.2}
 .reveal p,.reveal li{font-size:0.7em;line-height:1.5}
 .reveal .small{font-size:0.6em;color:var(--c-muted);margin:0 0 6px}
-.reveal .slides section{padding-top:28px !important}
+.reveal .slides section{padding-top:28px}
 
-.divider-section{background:#0a0d12!important;display:flex!important;flex-direction:column;align-items:center;justify-content:center;padding-top:0!important}
+.divider-section{background:#0a0d12;display:flex;flex-direction:column;align-items:center;justify-content:center;padding-top:0}
 .divider-section h2{font-size:2.2em;color:var(--c-white)}
 .divider-tag{font-family:var(--mono);font-size:0.6em;color:var(--c-dim);text-transform:uppercase;letter-spacing:0.2em;margin:0 0 12px}
 .divider-line{width:60px;height:3px;background:var(--c-purple);margin:20px auto 0}
@@ -79,12 +79,12 @@
 
 /* objectives */
 .obj-card{background:#1a1a2e;border:1px solid #2d2b55;border-radius:12px;padding:14px 18px;text-align:left;cursor:pointer;transition:all .25s;position:relative;display:flex;align-items:flex-start;gap:12px}
-.obj-card.done{background:#1f1a3a!important;border-color:var(--c-purple)!important}
-.obj-card.done .done-tick{opacity:1!important}
+.obj-card.done{background:#1f1a3a;border-color:var(--c-purple)}
+.obj-card.done .done-tick{opacity:1}
 
 .reveal .progress{color:var(--c-purple);height:3px}.reveal .controls button{color:var(--c-muted)}
 
-.flip-i{transform:rotateY(0deg)!important}.flip-i.flipped{transform:rotateY(180deg)!important}
+.flip-i{transform:rotateY(0deg)}.flip-i.flipped{transform:rotateY(180deg)}
 
 .canvas-wrapper{width:100%;height:360px;margin:12px auto;background:rgba(20,26,34,0.5);border-radius:12px;border:1px solid var(--c-border);display:flex;justify-content:center;align-items:center;overflow:hidden}
 .canvas-wrapper canvas{width:100%;height:100%;display:block}
@@ -175,16 +175,7 @@
   </div>
 </div>
 <div class="click-detail" id="s4-concept-detail"><p style="color:var(--c-muted);font-style:italic">Select a concept above</p></div>
-<script>
-(function(){var mo=new MutationObserver(function(){var el=document.getElementById('s4-concepts');if(!el)return;var sec=el.closest('section');if(!sec||!sec.classList.contains('present'))return;
-var info=[
-  {t:"<strong style='color:var(--c-purple)'>Superposition</strong> — a qubit exists in a combination of 0 and 1 simultaneously. Think of a spinning coin: not heads, not tails, but genuinely both at once. When measured, it collapses to one value. With many qubits in superposition, the system explores an exponential number of possibilities in parallel."},
-  {t:"<strong style='color:var(--c-purple)'>Entanglement</strong> — two qubits become linked so that measuring one instantly determines the state of the other, regardless of distance. Einstein called it 'spooky action at a distance.' It enables coordinated computation across qubits — the key to quantum speedup."},
-  {t:"<strong style='color:var(--c-purple)'>Interference</strong> — quantum algorithms are designed so that paths leading to wrong answers cancel each other out, while paths to correct answers reinforce. This is how a quantum computer 'steers' toward useful results despite exploring many possibilities."}
-];
-el.querySelectorAll('.click-card').forEach(function(c){c.addEventListener('click',function(){el.querySelectorAll('.click-card').forEach(function(x){x.classList.remove('active');});c.classList.add('active');var i=parseInt(c.getAttribute('data-c'));document.getElementById('s4-concept-detail').innerHTML='<p>'+info[i].t+'</p>';});});
-mo.disconnect();});mo.observe(document.body,{attributes:true,subtree:true,attributeFilter:['class']});})();
-</script>
+
 </section>
 
 
@@ -205,13 +196,13 @@ mo.disconnect();});mo.observe(document.body,{attributes:true,subtree:true,attrib
 
 <section data-bc="Day 2  ·  S4  ·  7 / 31" data-transition="fade">
 <h3 style="color:var(--c-purple)">Entanglement (interactive)</h3>
-<p class="small">Correlated qubits across any distance</p>
+<p class="small">Two Bloch spheres, one linked quantum state</p>
 <div class="canvas-wrapper" id="canvas-entangle"></div>
-<div id="entangle-outcome" style="display:none;background:var(--c-surface);border:1px solid var(--c-border);border-radius:12px;padding:12px 20px;max-width:960px;margin:12px auto 0;text-align:center">
-  <p style="font-size:0.56em;color:var(--c-white);margin:0;line-height:1.6"><strong>Measurement outcome:</strong> <span style="font-family:var(--mono);color:var(--c-coral)">Left qubit = |<span id="left-outcome">0</span>⟩</span> and <span style="font-family:var(--mono);color:var(--c-blue)">Right qubit = |<span id="right-outcome">1</span>⟩</span></p>
+<div id="entangle-outcome" style="display:none;background:var(--c-surface);border:1.5px solid var(--c-teal);border-radius:12px;padding:12px 20px;max-width:960px;margin:12px auto 0;text-align:center">
+  <p style="font-size:0.56em;color:var(--c-white);margin:0;line-height:1.6"><strong style="color:var(--c-teal)">Collapsed:</strong> <span style="font-family:var(--mono);color:var(--c-teal)">Qubit A = |<span id="left-outcome">0</span>⟩</span> &rarr; <span style="font-family:var(--mono);color:var(--c-coral)">Qubit B = |<span id="right-outcome">1</span>⟩</span></p>
 </div>
 <div style="background:var(--c-surface);border:1px solid var(--c-border);border-radius:12px;padding:12px 20px;max-width:960px;margin:12px auto 0">
-  <p style="font-size:0.56em;color:var(--c-white);margin:0;line-height:1.6">Two entangled qubits move in perfect anti-correlation. Measuring the left qubit instantly determines the right qubit's outcome. This "spooky action at a distance" is the key resource for quantum speedup.</p>
+  <p style="font-size:0.56em;color:var(--c-white);margin:0;line-height:1.6"><strong style="color:var(--c-teal)">Teal sphere:</strong> Qubit A. <strong style="color:var(--c-coral)">Coral sphere:</strong> Qubit B. Their state dots move in anti-correlation. Press Measure — both collapse to opposite poles simultaneously, no matter the distance.</p>
 </div>
 <div style="display:flex;gap:8px;justify-content:center;margin:12px 0;flex-wrap:wrap">
   <button data-qvis="entangle-play" style="padding:8px 14px;background:rgba(175,169,236,0.1);border:1px solid var(--c-purple);color:var(--c-purple);border-radius:8px;cursor:pointer;font-size:0.55em;font-weight:600;transition:all 0.2s;font-family:var(--font)">▶ Play</button>
@@ -285,17 +276,7 @@ mo.disconnect();});mo.observe(document.body,{attributes:true,subtree:true,attrib
   <div class="click-card" data-hw="3"><div style="font-size:1.4em;margin:0 0 4px">🔷</div><div style="font-size:0.48em;font-weight:700;color:var(--c-white)">Topological</div><div style="font-size:0.36em;color:var(--c-muted);margin-top:2px">Microsoft</div></div>
 </div>
 <div class="click-detail" id="s4-hw-detail"><p style="color:var(--c-muted);font-style:italic">Select a hardware type above</p></div>
-<script>
-(function(){var mo=new MutationObserver(function(){var el=document.getElementById('s4-hardware');if(!el)return;var sec=el.closest('section');if(!sec||!sec.classList.contains('present'))return;
-var hw=[
-  {t:"<strong style='color:var(--c-purple)'>Superconducting qubits</strong> — tiny circuits cooled to near absolute zero. Fastest gate operations (~ns). Most mature: IBM has 1000+ qubit systems. <em style='color:var(--c-amber)'>Trade-off:</em> short coherence times, requires extreme cooling, high error rates. Currently leading in qubit count but not in quality."},
-  {t:"<strong style='color:var(--c-purple)'>Trapped ions</strong> — individual atoms held in place by electromagnetic fields, manipulated with lasers. Highest gate fidelity (lowest error rates). <em style='color:var(--c-amber)'>Trade-off:</em> slower gate speeds, harder to scale to many qubits. Best for problems that need precision over speed."},
-  {t:"<strong style='color:var(--c-purple)'>Photonic</strong> — uses particles of light. Operates at room temperature. Naturally suited to networking and communication. <em style='color:var(--c-amber)'>Trade-off:</em> photons don't interact easily, making two-qubit gates difficult. Different computation model (measurement-based). Most promising for quantum networking."},
-  {t:"<strong style='color:var(--c-purple)'>Topological</strong> — uses exotic quantum states that are inherently error-resistant. If it works, error correction would be built into the hardware. <em style='color:var(--c-amber)'>Trade-off:</em> Microsoft has been pursuing this for 20 years. First working topological qubit demonstrated 2025. Most speculative, highest potential payoff."}
-];
-el.querySelectorAll('.click-card').forEach(function(c){c.addEventListener('click',function(){el.querySelectorAll('.click-card').forEach(function(x){x.classList.remove('active');});c.classList.add('active');var i=parseInt(c.getAttribute('data-hw'));document.getElementById('s4-hw-detail').innerHTML='<p>'+hw[i].t+'</p>';});});
-mo.disconnect();});mo.observe(document.body,{attributes:true,subtree:true,attributeFilter:['class']});})();
-</script>
+
 </section>
 
 
@@ -309,17 +290,7 @@ mo.disconnect();});mo.observe(document.body,{attributes:true,subtree:true,attrib
   <div class="click-card" data-sh="3"><div style="font-size:1.4em;margin:0 0 4px">🔍</div><div style="font-size:0.48em;font-weight:700;color:var(--c-blue)">Search</div><div style="font-size:0.36em;color:var(--c-muted);margin-top:2px">Unstructured search space</div></div>
 </div>
 <div class="click-detail" id="s4-shape-detail"><p style="color:var(--c-muted);font-style:italic">Select a problem shape above</p></div>
-<script>
-(function(){var mo=new MutationObserver(function(){var el=document.getElementById('s4-shapes');if(!el)return;var sec=el.closest('section');if(!sec||!sec.classList.contains('present'))return;
-var shapes=[
-  {t:"<strong style='color:var(--c-teal)'>Combinatorial optimisation</strong> — find the best combination from an exponentially large set. Portfolio allocation (which mix of 500 assets minimises risk?), logistics routing (shortest path through 100 cities), scheduling (assign 1000 tasks to 50 machines). Classical computers try combinations one by one; quantum explores many simultaneously via superposition."},
-  {t:"<strong style='color:var(--c-amber)'>Quantum simulation</strong> — simulate systems that are themselves quantum mechanical. Drug molecules, battery materials, catalysts. A classical computer needs exponential resources to simulate a quantum system; a quantum computer simulates it naturally. This is where quantum has the clearest theoretical advantage."},
-  {t:"<strong style='color:var(--c-coral)'>Integer factoring</strong> — decompose a large number into its prime factors. RSA encryption relies on this being hard. Shor's algorithm solves it efficiently on a quantum computer. Not commercially useful — but breaks the encryption that protects the internet. This is the cryptographic threat."},
-  {t:"<strong style='color:var(--c-blue)'>Unstructured search</strong> — find a specific item in an unsorted database. Grover's algorithm provides a quadratic speedup (√N instead of N). Useful but modest — not the exponential speedup people expect. Applicable to database search, constraint satisfaction, and some ML problems."}
-];
-el.querySelectorAll('.click-card').forEach(function(c){c.addEventListener('click',function(){el.querySelectorAll('.click-card').forEach(function(x){x.classList.remove('active');});c.classList.add('active');var i=parseInt(c.getAttribute('data-sh'));document.getElementById('s4-shape-detail').innerHTML='<p>'+shapes[i].t+'</p>';});});
-mo.disconnect();});mo.observe(document.body,{attributes:true,subtree:true,attributeFilter:['class']});})();
-</script>
+
 </section>
 
 
@@ -354,35 +325,7 @@ mo.disconnect();});mo.observe(document.body,{attributes:true,subtree:true,attrib
   </div>
 </div>
 <div class="match-detail" id="s4-match-detail"><p style="color:var(--c-muted);font-style:italic">Click any item to see its connections</p></div>
-<script>
-(function(){var mo=new MutationObserver(function(){var el=document.getElementById('s4-match');if(!el)return;var sec=el.closest('section');if(!sec||!sec.classList.contains('present'))return;
-var links={
-  sc:{lit:["sc","qaoa","vqe","optim","sim"],t:"<strong>Superconducting</strong> systems are best suited for QAOA (optimisation) and VQE (simulation). Fast gates but noisy — works for near-term hybrid algorithms that tolerate errors."},
-  ion:{lit:["ion","vqe","shor","sim","crypto"],t:"<strong>Trapped ion</strong> systems have the highest precision — ideal for VQE (chemistry simulation) and eventually Shor's (cryptography). Slower but more accurate."},
-  photo:{lit:["photo","grover","shor","crypto","search"],t:"<strong>Photonic</strong> systems use a different computation model. Best for networking, sampling problems, and potentially Grover-type search. Room temperature operation is a major advantage."},
-  topo:{lit:["topo","shor","qaoa","crypto","optim"],t:"<strong>Topological</strong> qubits — if they work — would have built-in error correction, making them ideal for algorithms that need deep circuits: Shor's and large-scale QAOA."},
-  qaoa:{lit:["qaoa","sc","topo","optim"],t:"<strong>QAOA</strong> (Quantum Approximate Optimisation Algorithm) — a hybrid quantum-classical approach for combinatorial problems. Runs on current NISQ hardware. The leading candidate for near-term quantum advantage in finance."},
-  vqe:{lit:["vqe","sc","ion","sim"],t:"<strong>VQE</strong> (Variational Quantum Eigensolver) — finds the lowest energy state of a molecular system. Used for drug discovery, battery chemistry, catalyst design. Works on today's noisy hardware."},
-  shor:{lit:["shor","ion","topo","crypto"],t:"<strong>Shor's algorithm</strong> — factors large numbers exponentially faster than classical. Breaks RSA encryption. Needs fault-tolerant hardware that doesn't exist yet. The reason governments are preparing now."},
-  grover:{lit:["grover","photo","ion","search"],t:"<strong>Grover's algorithm</strong> — searches an unsorted database in √N instead of N steps. Quadratic speedup, not exponential. Useful but modest. Applicable to constraint satisfaction and some ML optimisation."},
-  optim:{lit:["optim","qaoa","sc","topo"],t:"<strong>Optimisation problems</strong> — portfolio allocation, logistics routing, scheduling. The most commercially relevant near-term application. Banks (JPMorgan, Goldman) are actively experimenting with QAOA on superconducting hardware."},
-  sim:{lit:["sim","vqe","sc","ion"],t:"<strong>Simulation problems</strong> — modelling quantum systems like molecules, materials, and chemical reactions. The clearest theoretical advantage for quantum. Pharma and materials science are the primary customers."},
-  crypto:{lit:["crypto","shor","ion","topo"],t:"<strong>Cryptography threat</strong> — Shor's algorithm on a fault-tolerant quantum computer breaks RSA and ECC. Timeline: 10–20 years. But 'harvest now, decrypt later' makes it an immediate concern for long-lived secrets."},
-  search:{lit:["search","grover","photo"],t:"<strong>Search / ML problems</strong> — unstructured search, some pattern recognition tasks. Grover's provides √N speedup. Most ML problems do NOT benefit from quantum — this is a narrow category."}
-};
-var items=el.querySelectorAll('.match-item');
-items.forEach(function(item){
-  item.addEventListener('click',function(){
-    var key=item.getAttribute('data-m');
-    var info=links[key];
-    items.forEach(function(it){it.classList.remove('lit','dim');if(info.lit.indexOf(it.getAttribute('data-m'))===-1){it.classList.add('dim');}else{it.classList.add('lit');}});
-    var det=document.getElementById('s4-match-detail');
-    det.innerHTML='<p>'+info.t+'</p>';
-    det.style.borderColor='var(--c-purple)';
-  });
-});
-mo.disconnect();});mo.observe(document.body,{attributes:true,subtree:true,attributeFilter:['class']});})();
-</script>
+
 </section>
 
 
@@ -717,15 +660,112 @@ mo.disconnect();});mo.observe(document.body,{attributes:true,subtree:true,attrib
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/5.1.0/reveal.min.js" crossorigin="anonymous"></script>
 <script>
+/* Suppress known Reveal.js CDN cross-origin error on slide transitions */
+window.onerror=function(msg,src,line){if(msg==='Script error.'&&!src)return true;};
+
 Reveal.initialize({
   hash:true, transition:'fade', transitionSpeed:'default',
   controlsTutorial:false, progress:true, center:false,
   width:1280, height:720, margin:0.04
 });
 Reveal.on('slidechanged',function(e){
-  var bc=e.currentSlide.getAttribute('data-bc')||'';
-  var footer=document.getElementById('bc-footer');
-  if(footer)footer.textContent=bc;
+  try{
+    if(!e||!e.currentSlide)return;
+    var bc=e.currentSlide.getAttribute('data-bc')||'';
+    var footer=document.getElementById('bc-footer');
+    if(footer)footer.textContent=bc;
+  }catch(err){}
+});
+
+
+/* Click handlers - attached ONCE via document delegation */
+document.addEventListener('click', function(e) {
+  /* s4-concepts click cards */
+  var conceptCard = e.target.closest('#s4-concepts .click-card');
+  if (conceptCard) {
+    var info = [
+      "<strong style=\"color:var(--c-purple)\">Superposition</strong> — a qubit exists in a combination of 0 and 1 simultaneously. Think of a spinning coin: not heads, not tails, but genuinely both at once. When measured, it collapses to one value. With many qubits in superposition, the system explores an exponential number of possibilities in parallel.",
+      "<strong style=\"color:var(--c-purple)\">Entanglement</strong> — two qubits become linked so that measuring one instantly determines the state of the other, regardless of distance. Einstein called it spooky action at a distance. It enables coordinated computation across qubits — the key to quantum speedup.",
+      "<strong style=\"color:var(--c-purple)\">Interference</strong> — quantum algorithms are designed so that paths leading to wrong answers cancel each other out, while paths to correct answers reinforce. This is how a quantum computer steers toward useful results despite exploring many possibilities."
+    ];
+    var parent = conceptCard.closest('#s4-concepts');
+    parent.querySelectorAll('.click-card').forEach(function(x) { x.classList.remove('active'); });
+    conceptCard.classList.add('active');
+    var i = parseInt(conceptCard.getAttribute('data-c'));
+    var det = document.getElementById('s4-concept-detail');
+    if (det) det.innerHTML = '<p>' + info[i] + '</p>';
+    return;
+  }
+
+  /* s4-hardware click cards */
+  var hwCard = e.target.closest('#s4-hardware .click-card');
+  if (hwCard) {
+    var hw = [
+      "<strong style=\"color:var(--c-purple)\">Superconducting qubits</strong> — tiny circuits cooled to near absolute zero. Fastest gate operations (~ns). Most mature: IBM has 1000+ qubit systems. <em style=\"color:var(--c-amber)\">Trade-off:</em> short coherence times, requires extreme cooling, high error rates. Currently leading in qubit count but not in quality.",
+      "<strong style=\"color:var(--c-purple)\">Trapped ions</strong> — individual atoms held in place by electromagnetic fields, manipulated with lasers. Highest gate fidelity (lowest error rates). <em style=\"color:var(--c-amber)\">Trade-off:</em> slower gate speeds, harder to scale to many qubits. Best for problems that need precision over speed.",
+      "<strong style=\"color:var(--c-purple)\">Photonic</strong> — uses particles of light. Operates at room temperature. Naturally suited to networking and communication. <em style=\"color:var(--c-amber)\">Trade-off:</em> photons do not interact easily, making two-qubit gates difficult. Different computation model (measurement-based). Most promising for quantum networking.",
+      "<strong style=\"color:var(--c-purple)\">Topological</strong> — uses exotic quantum states that are inherently error-resistant. If it works, error correction would be built into the hardware. <em style=\"color:var(--c-amber)\">Trade-off:</em> Microsoft has been pursuing this for 20 years. First working topological qubit demonstrated 2025. Most speculative, highest potential payoff."
+    ];
+    var parent = hwCard.closest('#s4-hardware');
+    parent.querySelectorAll('.click-card').forEach(function(x) { x.classList.remove('active'); });
+    hwCard.classList.add('active');
+    var i = parseInt(hwCard.getAttribute('data-hw'));
+    var det = document.getElementById('s4-hw-detail');
+    if (det) det.innerHTML = '<p>' + hw[i] + '</p>';
+    return;
+  }
+
+  /* s4-shapes click cards */
+  var shCard = e.target.closest('#s4-shapes .click-card');
+  if (shCard) {
+    var shapes = [
+      "<strong style=\"color:var(--c-teal)\">Combinatorial optimisation</strong> — find the best combination from an exponentially large set. Portfolio allocation (which mix of 500 assets minimises risk?), logistics routing (shortest path through 100 cities), scheduling (assign 1000 tasks to 50 machines). Classical computers try combinations one by one; quantum explores many simultaneously via superposition.",
+      "<strong style=\"color:var(--c-amber)\">Quantum simulation</strong> — simulate systems that are themselves quantum mechanical. Drug molecules, battery materials, catalysts. A classical computer needs exponential resources to simulate a quantum system; a quantum computer simulates it naturally. This is where quantum has the clearest theoretical advantage.",
+      "<strong style=\"color:var(--c-coral)\">Integer factoring</strong> — decompose a large number into its prime factors. RSA encryption relies on this being hard. Shors algorithm solves it efficiently on a quantum computer. Not commercially useful — but breaks the encryption that protects the internet. This is the cryptographic threat.",
+      "<strong style=\"color:var(--c-blue)\">Unstructured search</strong> — find a specific item in an unsorted database. Grovers algorithm provides a quadratic speedup (sqrt of N instead of N). Useful but modest — not the exponential speedup people expect. Applicable to database search, constraint satisfaction, and some ML problems."
+    ];
+    var parent = shCard.closest('#s4-shapes');
+    parent.querySelectorAll('.click-card').forEach(function(x) { x.classList.remove('active'); });
+    shCard.classList.add('active');
+    var i = parseInt(shCard.getAttribute('data-sh'));
+    var det = document.getElementById('s4-shape-detail');
+    if (det) det.innerHTML = '<p>' + shapes[i] + '</p>';
+    return;
+  }
+
+  /* s4-match items */
+  var matchItem = e.target.closest('#s4-match .match-item');
+  if (matchItem) {
+    var links = {
+      sc:  {lit:["sc","qaoa","vqe","optim","sim"],       t:"<strong>Superconducting</strong> systems are best suited for QAOA (optimisation) and VQE (simulation). Fast gates but noisy — works for near-term hybrid algorithms that tolerate errors."},
+      ion: {lit:["ion","vqe","shor","sim","crypto"],      t:"<strong>Trapped ion</strong> systems have the highest precision — ideal for VQE (chemistry simulation) and eventually Shors (cryptography). Slower but more accurate."},
+      photo:{lit:["photo","grover","shor","crypto","search"],t:"<strong>Photonic</strong> systems use a different computation model. Best for networking, sampling problems, and potentially Grover-type search. Room temperature operation is a major advantage."},
+      topo:{lit:["topo","shor","qaoa","crypto","optim"],  t:"<strong>Topological</strong> qubits — if they work — would have built-in error correction, making them ideal for algorithms that need deep circuits: Shors and large-scale QAOA."},
+      qaoa:{lit:["qaoa","sc","topo","optim"],             t:"<strong>QAOA</strong> (Quantum Approximate Optimisation Algorithm) — a hybrid quantum-classical approach for combinatorial problems. Runs on current NISQ hardware. The leading candidate for near-term quantum advantage in finance."},
+      vqe: {lit:["vqe","sc","ion","sim"],                 t:"<strong>VQE</strong> (Variational Quantum Eigensolver) — finds the lowest energy state of a molecular system. Used for drug discovery, battery chemistry, catalyst design. Works on todays noisy hardware."},
+      shor:{lit:["shor","ion","topo","crypto"],            t:"<strong>Shors algorithm</strong> — factors large numbers exponentially faster than classical. Breaks RSA encryption. Needs fault-tolerant hardware that does not exist yet. The reason governments are preparing now."},
+      grover:{lit:["grover","photo","ion","search"],       t:"<strong>Grovers algorithm</strong> — searches an unsorted database in sqrt of N instead of N steps. Quadratic speedup, not exponential. Useful but modest. Applicable to constraint satisfaction and some ML optimisation."},
+      optim:{lit:["optim","qaoa","sc","topo"],             t:"<strong>Optimisation problems</strong> — portfolio allocation, logistics routing, scheduling. The most commercially relevant near-term application. Banks (JPMorgan, Goldman) are actively experimenting with QAOA on superconducting hardware."},
+      sim: {lit:["sim","vqe","sc","ion"],                  t:"<strong>Simulation problems</strong> — modelling quantum systems like molecules, materials, and chemical reactions. The clearest theoretical advantage for quantum. Pharma and materials science are the primary customers."},
+      crypto:{lit:["crypto","shor","ion","topo"],          t:"<strong>Cryptography threat</strong> — Shors algorithm on a fault-tolerant quantum computer breaks RSA and ECC. Timeline: 10-20 years. But harvest now, decrypt later makes it an immediate concern for long-lived secrets."},
+      search:{lit:["search","grover","photo"],             t:"<strong>Search / ML problems</strong> — unstructured search, some pattern recognition tasks. Grovers provides sqrt of N speedup. Most ML problems do NOT benefit from quantum — this is a narrow category."}
+    };
+    var key = matchItem.getAttribute('data-m');
+    var info = links[key];
+    if (!info) return;
+    var allItems = document.querySelectorAll('#s4-match .match-item');
+    allItems.forEach(function(it) {
+      it.classList.remove('lit','dim');
+      if (info.lit.indexOf(it.getAttribute('data-m')) === -1) { it.classList.add('dim'); }
+      else { it.classList.add('lit'); }
+    });
+    var det = document.getElementById('s4-match-detail');
+    if (det) {
+      det.innerHTML = '<p>' + info.t + '</p>';
+      det.style.borderColor = 'var(--c-purple)';
+    }
+    return;
+  }
 });
 
 /* Quantum Visualization Engine - Day 1 Pattern: IIFE + Event Delegation */
@@ -746,8 +786,8 @@ Reveal.on('slidechanged',function(e){
   
   QuantumVisEngine.prototype.initScene=function(){
     var w=this.container.clientWidth,h=this.container.clientHeight;
-    this.camera=new THREE.PerspectiveCamera(75,w/h,0.1,1000);
-    this.camera.position.z=4.5;
+    this.camera=new THREE.PerspectiveCamera(50,w/h,0.1,1000);
+    this.camera.position.set(0,1.5,10);
     this.scene=new THREE.Scene();
     this.scene.background=new THREE.Color(0x0a0d12);
     this.renderer=new THREE.WebGLRenderer({antialias:true,alpha:true});
@@ -818,37 +858,66 @@ Reveal.on('slidechanged',function(e){
   }
   
   function setupEntangle(s){
-    var g1=new THREE.SphereGeometry(0.7,16,16),m1=new THREE.MeshPhongMaterial({color:0xE24B4A});
-    s.s1=new THREE.Mesh(g1,m1);s.s1.position.x=-5.5;s.scene.add(s.s1);
-    var g2=new THREE.SphereGeometry(0.7,16,16),m2=new THREE.MeshPhongMaterial({color:0x85B7EB});
-    s.s2=new THREE.Mesh(g2,m2);s.s2.position.x=5.5;s.scene.add(s.s2);
-    var tm=new THREE.MeshPhongMaterial({color:0x5DCAA5,transparent:true,opacity:0.7});
-    s.tube=new THREE.Mesh(new THREE.CylinderGeometry(0.08,0.08,1,8),tm);
-    s.scene.add(s.tube);
-    s.scene.add(new THREE.DirectionalLight(0xffffff,0.8));
+    /* Left Bloch sphere (Qubit A) - teal */
+    var wgA=new THREE.IcosahedronGeometry(1.4,8),wmA=new THREE.MeshBasicMaterial({color:0x5DCAA5,wireframe:true,transparent:true,opacity:0.2});
+    s.wireA=new THREE.Mesh(wgA,wmA);s.wireA.position.x=-3.5;s.scene.add(s.wireA);
+    var sgA=new THREE.IcosahedronGeometry(1.4,6),smA=new THREE.MeshPhysicalMaterial({color:0x5DCAA5,wireframe:false,transparent:true,opacity:0.1,metalness:0,roughness:0.8,ior:1.5,transmission:0.8});
+    var solidA=new THREE.Mesh(sgA,smA);solidA.position.x=-3.5;s.scene.add(solidA);
+    s.scene.add(new THREE.ArrowHelper(new THREE.Vector3(0,1,0),new THREE.Vector3(-3.5,-1.6,0),3.2,0x5DCAA5,0.15,0.1));
+    var stgA=new THREE.SphereGeometry(0.14,16,16),stmA=new THREE.MeshPhongMaterial({color:0x5DCAA5,emissive:0x2a8a6a});
+    s.dotA=new THREE.Mesh(stgA,stmA);s.scene.add(s.dotA);
+
+    /* Right Bloch sphere (Qubit B) - coral */
+    var wgB=new THREE.IcosahedronGeometry(1.4,8),wmB=new THREE.MeshBasicMaterial({color:0xF0997B,wireframe:true,transparent:true,opacity:0.2});
+    s.wireB=new THREE.Mesh(wgB,wmB);s.wireB.position.x=3.5;s.scene.add(s.wireB);
+    var sgB=new THREE.IcosahedronGeometry(1.4,6),smB=new THREE.MeshPhysicalMaterial({color:0xF0997B,wireframe:false,transparent:true,opacity:0.1,metalness:0,roughness:0.8,ior:1.5,transmission:0.8});
+    var solidB=new THREE.Mesh(sgB,smB);solidB.position.x=3.5;s.scene.add(solidB);
+    s.scene.add(new THREE.ArrowHelper(new THREE.Vector3(0,1,0),new THREE.Vector3(3.5,-1.6,0),3.2,0xF0997B,0.15,0.1));
+    var stgB=new THREE.SphereGeometry(0.14,16,16),stmB=new THREE.MeshPhongMaterial({color:0xF0997B,emissive:0x8a4a3a});
+    s.dotB=new THREE.Mesh(stgB,stmB);s.scene.add(s.dotB);
+
+    /* Connection line between dots */
+    var lineMat=new THREE.LineBasicMaterial({color:0x85B7EB,transparent:true,opacity:0.5});
+    var lineGeo=new THREE.BufferGeometry();
+    lineGeo.setAttribute('position',new THREE.BufferAttribute(new Float32Array(6),3));
+    s.link=new THREE.Line(lineGeo,lineMat);
+    s.scene.add(s.link);
+
+    s.scene.add(new THREE.DirectionalLight(0xffffff,0.7));
     s.scene.add(new THREE.AmbientLight(0xffffff,0.5));
     s.isMeasured=false;
   }
   
   function animateEntangle(s,t){
+    /* Rotate wireframes like qubit slide */
+    s.wireA.rotation.x+=0.002;s.wireA.rotation.y+=0.003;
+    s.wireB.rotation.x+=0.002;s.wireB.rotation.y-=0.003;
+
     if(!s.isMeasured){
-      var o=Math.sin(t*1.5)*0.5;s.s1.position.y=o;s.s2.position.y=-o;
+      /* Anti-correlated motion on Bloch spheres */
+      var thetaA=t*1.2,phiA=Math.PI/2+Math.sin(t*0.8)*Math.PI/4;
+      var thetaB=thetaA+Math.PI,phiB=Math.PI-phiA;
+      s.dotA.position.set(-3.5+1.3*Math.sin(phiA)*Math.cos(thetaA),1.3*Math.cos(phiA),1.3*Math.sin(phiA)*Math.sin(thetaA));
+      s.dotB.position.set(3.5+1.3*Math.sin(phiB)*Math.cos(thetaB),1.3*Math.cos(phiB),1.3*Math.sin(phiB)*Math.sin(thetaB));
+      s.link.material.opacity=0.3+0.3*Math.sin(t*2.5);
     }else{
-      var collapseFrac=Math.min(1,(t-s.collapseStartFrame/60)*3);
-      var target1=s.measuredValue===0?0.7:-0.7;
-      var target2=s.measuredValue===0?-0.7:0.7;
-      s.s1.position.y=s.s1.position.y*(1-collapseFrac)+target1*collapseFrac;
-      s.s2.position.y=s.s2.position.y*(1-collapseFrac)+target2*collapseFrac;
+      var cf=Math.min(1,(t-s.collapseStartFrame/60)*4);
+      var targetA=s.measuredValue===0?1.4:-1.4;
+      var targetB=s.measuredValue===0?-1.4:1.4;
+      s.dotA.position.x=-3.5;
+      s.dotA.position.y=s.dotA.position.y*(1-cf)+targetA*cf;
+      s.dotA.position.z=s.dotA.position.z*(1-cf);
+      s.dotB.position.x=3.5;
+      s.dotB.position.y=s.dotB.position.y*(1-cf)+targetB*cf;
+      s.dotB.position.z=s.dotB.position.z*(1-cf);
+      s.link.material.opacity=0.6+0.4*Math.sin(t*6);
     }
-    var p1=new THREE.Vector3(s.s1.position.x,s.s1.position.y,s.s1.position.z);
-    var p2=new THREE.Vector3(s.s2.position.x,s.s2.position.y,s.s2.position.z);
-    var mid=new THREE.Vector3().addVectors(p1,p2).multiplyScalar(0.5);
-    var dist=p1.distanceTo(p2)+1.4;
-    s.tube.position.copy(mid);
-    s.tube.lookAt(p2);
-    s.tube.scale.z=dist;
-    var pulse=0.7+Math.sin(t*3)*0.3;
-    s.tube.material.opacity=s.isMeasured?pulse*(1-Math.min(1,(t-s.collapseStartFrame/60)*3)):pulse;
+
+    /* Update connection line endpoints */
+    var pos=s.link.geometry.attributes.position.array;
+    pos[0]=s.dotA.position.x;pos[1]=s.dotA.position.y;pos[2]=s.dotA.position.z;
+    pos[3]=s.dotB.position.x;pos[4]=s.dotB.position.y;pos[5]=s.dotB.position.z;
+    s.link.geometry.attributes.position.needsUpdate=true;
   }
   
   /* Classical vs Quantum Visualizations */
@@ -1039,21 +1108,27 @@ Reveal.on('slidechanged',function(e){
   
   /* Reveal Events */
   Reveal.on('ready',function(){
-    var s=Reveal.getCurrentSlide();
-    if(s.querySelector('#canvas-classical'))initVis('canvas-classical',setupClassical,animateClassical);
-    if(s.querySelector('#canvas-quantum'))initVis('canvas-quantum',setupQuantum,animateQuantum);
-    if(s.querySelector('#canvas-qubit'))initVis('canvas-qubit',setupQubit,animateQubit);
-    if(s.querySelector('#canvas-entangle'))initVis('canvas-entangle',setupEntangle,animateEntangle);
-    if(s.querySelector('#canvas-interference'))initVis('canvas-interference',setupInterference,animateInterference);
+    try{
+      var s=Reveal.getCurrentSlide();
+      if(!s)return;
+      if(s.querySelector('#canvas-classical'))initVis('canvas-classical',setupClassical,animateClassical);
+      if(s.querySelector('#canvas-quantum'))initVis('canvas-quantum',setupQuantum,animateQuantum);
+      if(s.querySelector('#canvas-qubit'))initVis('canvas-qubit',setupQubit,animateQubit);
+      if(s.querySelector('#canvas-entangle'))initVis('canvas-entangle',setupEntangle,animateEntangle);
+      if(s.querySelector('#canvas-interference'))initVis('canvas-interference',setupInterference,animateInterference);
+    }catch(err){console.warn('ready handler:',err.message);}
   });
   
   Reveal.on('slidechanged',function(e){
-    var s=e.currentSlide;
-    if(s.querySelector('#canvas-classical'))initVis('canvas-classical',setupClassical,animateClassical);
-    if(s.querySelector('#canvas-quantum'))initVis('canvas-quantum',setupQuantum,animateQuantum);
-    if(s.querySelector('#canvas-qubit'))initVis('canvas-qubit',setupQubit,animateQubit);
-    if(s.querySelector('#canvas-entangle'))initVis('canvas-entangle',setupEntangle,animateEntangle);
-    if(s.querySelector('#canvas-interference'))initVis('canvas-interference',setupInterference,animateInterference);
+    try{
+      if(!e||!e.currentSlide)return;
+      var s=e.currentSlide;
+      if(s.querySelector('#canvas-classical'))initVis('canvas-classical',setupClassical,animateClassical);
+      if(s.querySelector('#canvas-quantum'))initVis('canvas-quantum',setupQuantum,animateQuantum);
+      if(s.querySelector('#canvas-qubit'))initVis('canvas-qubit',setupQubit,animateQubit);
+      if(s.querySelector('#canvas-entangle'))initVis('canvas-entangle',setupEntangle,animateEntangle);
+      if(s.querySelector('#canvas-interference'))initVis('canvas-interference',setupInterference,animateInterference);
+    }catch(err){console.warn('slidechanged handler:',err.message);}
   });
   
   /* Button Handlers */
