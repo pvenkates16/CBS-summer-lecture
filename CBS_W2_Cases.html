@@ -2130,6 +2130,588 @@ code { background: #141a22; border: 1px solid #2a3342; border-radius: 4px; paddi
 </div>
 </section>
 
+<!-- NEW CASES FOR WEEK 2: F13 YOUTUBE, F14 CLEARVIEW, F15 THERANOS -->
+<!-- INSERT THESE BEFORE THE "W2 · Part 3" SECTION IN CBS_W2_Cases.html -->
+
+<!-- ============================================================================ -->
+<!-- F13: YOUTUBE RECOMMENDATIONS ALGORITHM - METRIC CORRUPTION -->
+<!-- ============================================================================ -->
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F13 · S1 · Problem" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F13</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">YouTube Recommendations</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">The problem being solved</h3>
+  <h2 style="color:#E24B4A;margin:0 0 14px;font-size:2.0em;line-height:1.1;letter-spacing:-0.01em">Watch-Time Optimization</h2>
+  <div style="background:#141a22;border:1px solid #2a3342;border-left:4px solid #E24B4A;border-radius:0 10px 10px 0;padding:16px 20px">
+    <p style="font-size:0.56em;color:#e8eaed;line-height:1.6;margin:0">YouTube's algorithm recommends videos to 2+ billion users. The metric: how long users stay watching. Optimize watch time, and the algorithm learns which videos keep users engaged. The metric is quantifiable, measurable, and directly tied to ad revenue.</p>
+  </div>
+  <div style="display:flex;gap:12px;margin-top:12px">
+    <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:12px 16px;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;margin:0 0 4px;text-transform:uppercase">Sector</p>
+      <p style="font-size:0.50em;color:#e8eaed;margin:0;font-weight:600">Digital media / Recommendation engines</p>
+    </div>
+    <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:12px 16px;flex:2">
+      <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;margin:0 0 4px;text-transform:uppercase">Type</p>
+      <p style="font-size:0.50em;color:#E24B4A;margin:0;font-weight:600">Metric corruption — metric and goal diverged</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F13 · S2 · Approach" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F13</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">YouTube Recommendations</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">How they tried to solve it</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Deep neural networks</strong> trained on billions of user interactions (clicks, dwell time, watch duration).</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Recommendation pipeline</strong> optimized across homepage, suggested videos, and autoplay.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Personalization at scale</strong> — algorithm predicts individual user preferences with 80%+ accuracy.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Technical execution was elite.</strong> YouTube's recommendation system is one of the most sophisticated ML systems ever built.</li></ul>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F13 · S3 · What Went Wrong" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F13</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">YouTube Recommendations</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">What went wrong</h3>
+  <div style="display:flex;gap:10px;margin-bottom:14px"><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">2B+ users</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">affected</p>
+    </div><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">70%</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">of views via algorithm</p>
+    </div><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">2019-2020</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">problem acknowledged</p>
+    </div><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">-40%</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">conspiracy reduction (real)</p>
+    </div></div>
+  <div style="background:#141a22;border:1px solid #2a3342;border-left:4px solid #E24B4A;border-radius:0 10px 10px 0;padding:16px 20px">
+    <p style="font-size:0.56em;color:#e8eaed;line-height:1.6;margin:0">YouTube optimized for watch time and systematically promoted conspiracy, outrage, and radicalization pathways. The algorithm worked perfectly—it kept users watching. But watch time ≠ user welfare. YouTube claimed 50-70% reduction in conspiracy recommendations; researchers found actual reduction was 40%, with radicalization pathways persisting.</p>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F13 · S4 · Failure Patterns" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F13</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">YouTube Recommendations</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">Failure patterns</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Metric Corruption:</strong> Watch time is not user welfare. Optimization target and actual goal diverged completely.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Measurability Bias:</strong> Engineers can optimize what they measure (watch time). Cannot optimize "truth" or "user benefit" (subjective).</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Feedback Loop Amplification:</strong> Higher engagement → more recommendations → higher engagement. System locks onto conspiracy pathways.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Tail Risk Blindness:</strong> Algorithm well-calibrated on average but systematically promoted tail content (conspiracy, outrage, radicalization).</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">False Progress Metrics:</strong> Company reported reductions in conspiracy recommendations; actual radicalization pathways persisted.</li></ul>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F13 · S5 · Open Questions" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F13</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">YouTube Recommendations</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">Open questions</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Business model or technology failure?</strong> YouTube's revenue depends on watch time. Was the metric wrong, or was the business model misaligned with user welfare?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">How do you measure quality algorithmically?</strong> How do you encode ethics or truthfulness into an optimization function that an algorithm can actually optimize?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Who catches this pattern?</strong> YouTube had thousands of ML engineers. Did no one notice, or did business incentives create institutional silence?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Engineer leverage vs. institution scale:</strong> If you notice this in 2017, who do you tell, and what power do you have against a $2T company?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Can you ever have a neutral algorithm?</strong> Or does every choice of metric embed values and tradeoffs?</li></ul>
+</div>
+</section>
+
+<!-- ============================================================================ -->
+<!-- F14: CLEARVIEW AI - DATA GOVERNANCE FAILURE -->
+<!-- ============================================================================ -->
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F14 · S1 · Problem" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F14</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">Clearview AI</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">The problem being solved</h3>
+  <h2 style="color:#E24B4A;margin:0 0 14px;font-size:2.0em;line-height:1.1;letter-spacing:-0.01em">Facial Recognition at Scale</h2>
+  <div style="background:#141a22;border:1px solid #2a3342;border-left:4px solid #E24B4A;border-radius:0 10px 10px 0;padding:16px 20px">
+    <p style="font-size:0.56em;color:#e8eaed;line-height:1.6;margin:0">Clearview AI built a facial recognition database by scraping billions of photos from the internet. Claim: "It's all public data." The company then sold access to law enforcement and private corporations to identify individuals.</p>
+  </div>
+  <div style="display:flex;gap:12px;margin-top:12px">
+    <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:12px 16px;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;margin:0 0 4px;text-transform:uppercase">Sector</p>
+      <p style="font-size:0.50em;color:#e8eaed;margin:0;font-weight:600">Biometric data / Surveillance technology</p>
+    </div>
+    <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:12px 16px;flex:2">
+      <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;margin:0 0 4px;text-transform:uppercase">Type</p>
+      <p style="font-size:0.50em;color:#E24B4A;margin:0;font-weight:600">Data governance + scope creep failure</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F14 · S2 · Approach" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F14</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">Clearview AI</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">How they tried to solve it</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Automated photo scraping</strong> from Facebook, Google Images, YouTube, and other public websites.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Facial geometry indexing</strong> — extracted facial features from billions of photos into searchable database.</li><li style="margin-bottom:14px;font-size:0.54em;color:#E24B4A">Sold access to law enforcement</strong> — 600+ police departments, ICE, FBI, and private security firms.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Business model: subscription-based</strong> law enforcement identification service.</li></ul>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F14 · S3 · What Went Wrong" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F14</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">Clearview AI</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">What went wrong</h3>
+  <div style="display:flex;gap:10px;margin-bottom:14px"><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">3B+ photos</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">scraped without consent</p>
+    </div><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">20B+ facial indexes</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">in database</p>
+    </div><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">Jan 2020</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">public exposure</p>
+    </div><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">$51.75M</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">settlement (equity)</p>
+    </div></div>
+  <div style="background:#141a22;border:1px solid #2a3342;border-left:4px solid #E24B4A;border-radius:0 10px 10px 0;padding:16px 20px">
+    <p style="font-size:0.56em;color:#e8eaed;line-height:1.6;margin:0">Clearview's defense: "It's all public data." Technically true. But "public data" doesn't mean "any use is acceptable." Original context: family photos, vacation pictures, social media. New context: mass surveillance, law enforcement tracking, potentially enabling stalking and domestic violence. Zero consent from the people in those photos.</p>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F14 · S4 · Failure Patterns" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F14</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">Clearview AI</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">Failure patterns</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Governance Blindness:</strong> No function asked "Should we do this?" or "Who should we ask permission from?"</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Public Data ≠ Public Use:</strong> Data publicly visible doesn't mean any use is acceptable. Original context ≠ new context.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Scope Creep:</strong> From "identify suspects" → "track anyone" → enables stalking, domestic violence, surveillance.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Consent Absent:</strong> Zero consent from people in photos. Terms of service violated. No opt-out mechanism until lawsuit forced one.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Regulatory Lag:</strong> Company operated openly for years before being exposed. Regulators were slow to act.</li></ul>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F14 · S5 · Open Questions" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F14</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">Clearview AI</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">Open questions</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">If data is public, is any use ethical?</strong> Where do you draw the line between "I can use this data" and "I should use this data"?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Who should have been in the room?</strong> Technologists? Ethicists? Legal? Law enforcement customers? Privacy advocates?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Can you ever get informed consent for surveillance?</strong> People post photos to Facebook for social sharing, not facial indexing. Can they really consent to this use?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Settlement vs. prevention:</strong> $51.75M in settlement doesn't prevent similar systems. What governance would have stopped this before it happened?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Domain-specific ethics:</strong> Same facial recognition technology might be acceptable for passport verification but unacceptable for mass surveillance. How do you encode these boundaries?</li></ul>
+</div>
+</section>
+
+<!-- ============================================================================ -->
+<!-- F15: THERANOS - EMERGING TECH + ORGANIZATIONAL DECEPTION -->
+<!-- ============================================================================ -->
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F15 · S1 · Problem" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F15</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">Theranos</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">The problem being solved</h3>
+  <h2 style="color:#E24B4A;margin:0 0 14px;font-size:2.0em;line-height:1.1;letter-spacing:-0.01em">Revolutionary Blood Testing</h2>
+  <div style="background:#141a22;border:1px solid #2a3342;border-left:4px solid #E24B4A;border-radius:0 10px 10px 0;padding:16px 20px">
+    <p style="font-size:0.56em;color:#e8eaed;line-height:1.6;margin:0">Theranos claimed revolutionary blood-testing technology: run hundreds of diagnostic tests from a single finger prick instead of drawing blood from a vein. Founder Elizabeth Holmes, age 19, dropped out of Stanford to build the company. The technology never worked.</p>
+  </div>
+  <div style="display:flex;gap:12px;margin-top:12px">
+    <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:12px 16px;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;margin:0 0 4px;text-transform:uppercase">Sector</p>
+      <p style="font-size:0.50em;color:#e8eaed;margin:0;font-weight:600">Healthcare / Medical devices</p>
+    </div>
+    <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:12px 16px;flex:2">
+      <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;margin:0 0 4px;text-transform:uppercase">Type</p>
+      <p style="font-size:0.50em;color:#E24B4A;margin:0;font-weight:600">Organizational deception + information asymmetry</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F15 · S2 · Approach" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F15</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">Theranos</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">How they tried to solve it</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Recruited elite board</strong> — former Secretary of State Henry Kissinger, former Defense Secretary James Mattis, former Secretaries.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Raised $700M+ in venture capital</strong> from top-tier investors and media moguls.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Partnership with Walgreens and Safeway</strong> — multimillion-dollar contracts to deploy in pharmacies.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Media narrative:</strong> Holmes became world's youngest self-made female billionaire; valued at $9 billion by 2014.</li></ul>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F15 · S3 · What Went Wrong" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F15</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">Theranos</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">What went wrong</h3>
+  <div style="display:flex;gap:10px;margin-bottom:14px"><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">$9B</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">valuation (claimed)</p>
+    </div><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">0</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">working tests</p>
+    </div><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">2015</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">WSJ investigation</p>
+    </div><div style="background:#0b0f14;border:1px solid #E24B4A;border-radius:8px;padding:10px 12px;text-align:center;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.90em;font-weight:700;color:#E24B4A;margin:0">11 yrs</p>
+      <p style="font-size:0.40em;color:#8b95a5;margin:4px 0 0">prison sentence</p>
+    </div></div>
+  <div style="background:#141a22;border:1px solid #2a3342;border-left:4px solid #E24B4A;border-radius:0 10px 10px 0;padding:16px 20px">
+    <p style="font-size:0.56em;color:#e8eaed;line-height:1.6;margin:0">The Edison device ran fewer than 10% of claimed tests with accuracy rates below medical standards. Theranos falsified quality control reports, faked customer test results using competitor machines, and lied to investors about revenue and deployments. Patients received inaccurate diagnoses. One patient had her medication changed based on false results, leading to a heart attack.</p>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F15 · S4 · Failure Patterns" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F15</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">Theranos</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">Failure patterns</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Information Asymmetry:</strong> Emerging tech creates gaps where nobody can verify claims. Claim revolutionary → hide details as "trade secret" → nobody can verify.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Board as Decoration:</strong> Kissinger and Mattis lent credibility but had no domain expertise to verify claims.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Regulatory Lag:</strong> FDA moved slowly; fraud had been ongoing for years before inspection occurred.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Whistle-Blower Failure:</strong> Employee Erika Cheung raised safety concerns; they were ignored and retaliated against.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Culture of Deception:</strong> Systemic fraud: falsified reports, fake customer tests, lies to investors, not just incompetence.</li></ul>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  F15 · S5 · Open Questions" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#E24B4A;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">CASE F15</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">Theranos</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">Open questions</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">How do you verify emerging tech claims?</strong> When the technology is opaque and verification requires domain expertise, how do you catch deception?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Board responsibility:</strong> Did Kissinger and Mattis fail in fiduciary duty? Or was the information asymmetry impossible to overcome?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Should FDA have authority to require proof?</strong> Should companies be required to demonstrate device accuracy before major deployments?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Move fast and break things vs. medical accuracy:</strong> How do you balance innovation velocity with ensuring patient safety?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#E24B4A">Whistle-blower empowerment:</strong> Erika Cheung raised concerns; they were dismissed. How do organizations ensure safety concerns are heard?</li></ul>
+</div>
+</section>
+
+<!-- ============================================================================ -->
+<!-- DEMOCRATIZATION OF STRATEGY: FIFA FOOTBALL AI PRO -->
+<!-- ============================================================================ -->
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  Democratization · Cover" data-transition="fade">
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px 80px;text-align:center">
+  <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;text-transform:uppercase;letter-spacing:0.18em;margin:0 0 10px">Week 2 · New Category</p>
+  <h2 style="color:#5DCAA5;margin:0 0 12px;font-size:2.0em">Democratization of Strategy</h2>
+  <p style="font-size:0.48em;color:#8b95a5;max-width:650px;margin:0 0 22px;line-height:1.6">When elite information becomes widely available, competitive advantage moves from "knowing what to do" to "executing when it matters." One case: when predictive analytics become commoditized, what creates defensible advantage?</p>
+  <div style="background:#0a2a1e;border:1px solid #5DCAA5;border-radius:8px;padding:8px 18px"><p style="font-size:0.38em;color:#5DCAA5;font-weight:700;margin:0">Spain 0-0 Cape Verde · 2026 World Cup</p></div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  Democratization · FIFA · Problem" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#5DCAA5;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">DEMOCRATIZATION</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">FIFA Football AI Pro</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">The problem being solved</h3>
+  <h2 style="color:#5DCAA5;margin:0 0 14px;font-size:2.0em;line-height:1.1;letter-spacing:-0.01em">Prediction Under Certainty</h2>
+  <div style="background:#141a22;border:1px solid #2a3342;border-left:4px solid #5DCAA5;border-radius:0 10px 10px 0;padding:16px 20px">
+    <p style="font-size:0.56em;color:#e8eaed;line-height:1.6;margin:0">Elite teams use sophisticated analytics to predict outcomes: expected goals (xG), possession dominance, player ratings, historical matchups. Data is now widely available. Analytics is commoditized. Question: when strategy becomes democratized, what creates defensible competitive advantage?</p>
+  </div>
+  <div style="display:flex;gap:12px;margin-top:12px">
+    <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:12px 16px;flex:1">
+      <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;margin:0 0 4px;text-transform:uppercase">Comparison</p>
+      <p style="font-size:0.50em;color:#e8eaed;margin:0;font-weight:600">Spain (2nd) vs Cape Verde (67th)</p>
+    </div>
+    <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:12px 16px;flex:2">
+      <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;margin:0 0 4px;text-transform:uppercase">Type</p>
+      <p style="font-size:0.50em;color:#5DCAA5;margin:0;font-weight:600">Execution failure under uncertainty</p>
+    </div>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  Democratization · FIFA · Analysis" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#5DCAA5;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">DEMOCRATIZATION</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">FIFA Football AI Pro</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">The match: Spain 0-0 Cape Verde</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#5DCAA5">Pre-match prediction:</strong> Spain 92% to win, <3% draw probability (xG models).</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#5DCAA5">Spain's performance:</strong> 74% possession, 13-3 shots, 394-182 passes, 2.29 expected goals.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#5DCAA5">Result:</strong> 0-0 draw. Cape Verde goalkeeper (Portuguese 2nd division) made 7 saves.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#5DCAA5">Ranking gap:</strong> Spain 2nd globally, Cape Verde 67th — 65-point gap, 9th-largest in World Cup history.</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#5DCAA5">Transfer value:</strong> Spain's Lamine Yamal alone ($232M) worth 3.7× entire Cape Verde squad ($63M).</li></ul>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  Democratization · FIFA · Teaching" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#5DCAA5;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">DEMOCRATIZATION</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">FIFA Football AI Pro</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">What this teaches</h3>
+  <h2 style="color:#5DCAA5;margin:0 0 14px;font-size:1.6em">Strategy vs. Execution vs. Expertise</h2>
+  <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:16px 20px;margin-bottom:14px">
+    <p style="font-size:0.54em;color:#e8eaed;line-height:1.6;margin:0"><strong style="color:#5DCAA5">Strategy:</strong> Spain's playbook was perfect. Dominate possession, create numerical advantages, isolate defenders. This strategy wins 92% of the time. Cape Verde knew Spain's strategy (everyone does—it's data-driven and public).</p>
+  </div>
+  <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:16px 20px;margin-bottom:14px">
+    <p style="font-size:0.54em;color:#e8eaed;line-height:1.6;margin:0"><strong style="color:#5DCAA5">Execution:</strong> Spain executed their strategy perfectly. Crisp passing, correct positioning, appropriate runs. But execution at the margin (goalkeeper saves, missed chances under pressure) became decisive.</p>
+  </div>
+  <div style="background:#141a22;border:1px solid #2a3342;border-radius:8px;padding:16px 20px">
+    <p style="font-size:0.54em;color:#e8eaed;line-height:1.6;margin:0"><strong style="color:#5DCAA5">Expertise:</strong> Cape Verde's expertise wasn't strategic innovation; it was organizational discipline. Defensive coordination so good that it neutralized Spain's strategic advantage. They didn't outsmart Spain; they executed a disciplined defense.</p>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  Democratization · FIFA · Questions" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 48px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+    <div style="display:flex;align-items:center;gap:12px">
+      <div style="background:#5DCAA5;border-radius:5px;padding:4px 12px">
+        <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#0b0f14;font-weight:700;margin:0;letter-spacing:0.1em;text-transform:uppercase">DEMOCRATIZATION</p>
+      </div>
+      <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#4a5568;margin:0;letter-spacing:0.1em">FIFA Football AI Pro</p>
+    </div>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 14px;font-size:1.5em">Open questions</h3>
+  <ul style="list-style:none;padding:0;margin:0"><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#5DCAA5">When strategy is democratized, where does competitive edge live?</strong> Ten years ago, elite teams had exclusive access to tactical data. Now everyone does. What creates defensible advantage?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#5DCAA5">Is psychology quantifiable?</strong> Spain played nervous after 30 minutes (crowd whistles). Cape Verde played with "no nerves." Can you measure and predict psychological readiness?</li><li style="margin-bottom:14py;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#5DCAA5">What would you measure instead?</strong> Expected goals were accurate on average. But they miss tail events. What metrics capture execution under pressure?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#5DCAA5">Does this apply to business AI?</strong> If your competitors have access to the same ML models and data, where do you differentiate?</li><li style="margin-bottom:14px;font-size:0.54em;color:#e8eaed;line-height:1.5"><strong style="color:#5DCAA5">Levels the playing field?</strong> Does democratization of strategy actually reduce the advantage of elite teams and budgets?</li></ul>
+</div>
+</section>
+
+<!-- W2 · NEW NEAR-MISS CASE: JPMorgan Quantum Initiative -->
+
+<!-- NM4: JPMorgan Quantum Initiative - Hype vs. Delivery -->
+<section data-background-color="#0b0f14" data-bc="W2  ·  NM4  ·  Cover" data-transition="fade">
+<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px 80px;text-align:center">
+  <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;text-transform:uppercase;letter-spacing:0.18em;margin:0 0 14px">Near-Miss 4 of 3</p>
+  <h2 style="color:#EF9F27;margin:0 0 12px;font-size:2.2em">JPMorgan Quantum Initiative</h2>
+  <p style="font-size:0.50em;color:#8b95a5;max-width:700px;margin:0 0 28px;line-height:1.6">Announced quantum advantage. Invested $100M+. Built real systems. Then quietly scaled back public claims. What separates deep tech promise from reality?</p>
+  <div style="background:#141a22;border:1px solid #2a3342;border-radius:10px;padding:12px 28px">
+    <p style="font-family:'DM Mono',monospace;font-size:0.36em;color:#EF9F27;font-weight:700;margin:0">The pattern: Real investment. Real limitations. Real governance lesson.</p>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  NM4 · The Promise" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 52px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+    <div style="width:3px;height:28px;background:#EF9F27;border-radius:2px;flex-shrink:0"></div>
+    <p style="font-family:'DM Mono',monospace;font-size:0.32em;color:#EF9F27;margin:0;text-transform:uppercase;letter-spacing:0.12em">2019–2022: The Hype Phase</p>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 16px;font-size:1.5em">JPMorgan's Quantum Advantage Narrative</h3>
+  <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+    <div style="background:#141a22;border:1px solid #2a3342;border-radius:6px;padding:14px">
+      <p style="font-family:'DM Mono',monospace;font-size:0.30em;color:#EF9F27;margin:0 0 8px;text-transform:uppercase;letter-spacing:0.1em">2019 Announcement</p>
+      <ul style="list-style:none;padding:0;margin:0;font-size:0.42em;color:#e8eaed;line-height:1.6">
+        <li>✓ "Quantum will revolutionize finance"</li>
+        <li>✓ Portfolio optimization (VaR, Greeks)</li>
+        <li>✓ Risk pricing exponentially faster</li>
+        <li>✓ Quantum ML for fraud detection</li>
+        <li>✓ $100M+ multi-year investment</li>
+      </ul>
+    </div>
+    <div style="background:#141a22;border:1px solid #2a3342;border-radius:6px;padding:14px">
+      <p style="font-family:'DM Mono',monospace;font-size:0.30em;color:#EF9F27;margin:0 0 8px;text-transform:uppercase;letter-spacing:0.1em">Media Narrative</p>
+      <ul style="list-style:none;padding:0;margin:0;font-size:0.42em;color:#e8eaed;line-height:1.6">
+        <li>✓ "JPMorgan ahead of the quantum curve"</li>
+        <li>✓ "5–10 year competitive advantage"</li>
+        <li>✓ First-mover in quantum finance</li>
+        <li>✓ Hiring quantum PhDs at scale</li>
+        <li>✓ Competitor pressure (others invest too)</li>
+      </ul>
+    </div>
+  </div>
+  <div style="border-top:1px solid #2a3342;padding-top:12px;margin-top:16px">
+    <p style="font-size:0.38em;color:#8b95a5;margin:0"><strong>CEO Jamie Dimon:</strong> "Quantum computing could revolutionize financial services. JPMorgan is at the forefront." (2021 Shareholder Letter)</p>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  NM4 · The Practice" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 52px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+    <div style="width:3px;height:28px;background:#85B7EB;border-radius:2px;flex-shrink:0"></div>
+    <p style="font-family:'DM Mono',monospace;font-size:0.32em;color:#85B7EB;margin:0;text-transform:uppercase;letter-spacing:0.12em">2022–2024: The Reality Phase</p>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 16px;font-size:1.5em">What JPMorgan Actually Built (Real, but Limited)</h3>
+  <div style="flex:1;display:flex;flex-direction:column;gap:10px;justify-content:space-around">
+    <div style="background:#141a22;border-left:3px solid #85B7EB;padding:14px;border-radius:6px">
+      <p style="font-family:'DM Mono',monospace;font-size:0.30em;color:#85B7EB;margin:0 0 6px;font-weight:700">Quantum-Inspired Algorithms</p>
+      <p style="font-size:0.40em;color:#e8eaed;margin:0">Built hybrid classical-quantum optimization for portfolio hedging. Tested on IBM quantum processors (10–20 qubits). Classical algorithm still outperformed or matched quantum on realistic problem sizes.</p>
+    </div>
+    <div style="background:#141a22;border-left:3px solid #85B7EB;padding:14px;border-radius:6px">
+      <p style="font-family:'DM Mono',monospace;font-size:0.30em;color:#85B7EB;margin:0 0 6px;font-weight:700">Research Partnerships</p>
+      <p style="font-size:0.40em;color:#e8eaed;margin:0">Collaborated with IBM, Rigetti, academic labs. Published papers. Hired top quantum scientists. Investment was REAL—but outcomes were research-stage, not production-ready.</p>
+    </div>
+    <div style="background:#141a22;border-left:3px solid #85B7EB;padding:14px;border-radius:6px">
+      <p style="font-family:'DM Mono',monospace;font-size:0.30em;color:#85B7EB;margin:0 0 6px;font-weight:700">The Gap</p>
+      <p style="font-size:0.40em;color:#e8eaed;margin:0">NOISY QUANTUM HARDWARE. Current quantum computers (NISQ era) have too much error to provide advantage on real problems. Claimed advantage required fault-tolerant quantum machines (10+ years away, if ever).</p>
+    </div>
+  </div>
+  <div style="border-top:1px solid #2a3342;padding-top:12px;margin-top:12px">
+    <p style="font-size:0.36em;color:#8b95a5;margin:0"><strong>Pattern recognized:</strong> Investment was NOT wasted (research is real), but near-term ROI was vastly overstated.</p>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  NM4 · The Course-Correction" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 52px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+    <div style="width:3px;height:28px;background:#5DCAA5;border-radius:2px;flex-shrink:0"></div>
+    <p style="font-family:'DM Mono',monospace;font-size:0.32em;color:#5DCAA5;margin:0;text-transform:uppercase;letter-spacing:0.12em">2024: The Recalibration</p>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 16px;font-size:1.5em">What Changed (Quietly)</h3>
+  <ul style="list-style:none;padding:0;margin:0;flex:1;font-size:0.42em;color:#e8eaed;line-height:1.7">
+    <li style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #2a3342">
+      <strong style="color:#5DCAA5">Stopped overstating timelines:</strong> No longer claiming "5–10 year advantage." Now "research collaboration"—a hedged position.
+    </li>
+    <li style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #2a3342">
+      <strong style="color:#5DCAA5">Reframed narrative:</strong> Shifted from "quantum advantage in finance" to "monitoring quantum-as-a-service landscape" (i.e., watching, not leading).
+    </li>
+    <li style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #2a3342">
+      <strong style="color:#5DCAA5">Continued funding:</strong> Still invests in quantum (CSIS partnership, academic relationships), but messaging is survival-focused, not leadership-focused.
+    </li>
+    <li style="margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #2a3342">
+      <strong style="color:#5DCAA5">No admission of error:</strong> Simply stopped promising. Typical tech playbook: overpromise → quiet downgrade → move on.
+    </li>
+  </ul>
+  <div style="background:#141a22;border:1px solid #2a3342;border-radius:6px;padding:12px;margin-top:12px">
+    <p style="font-size:0.36em;color:#8b95a5;margin:0"><strong>Key:</strong> This is a NEAR-MISS, not a FAILURE. JPMorgan didn't crash. Investment wasn't sunk cost. They course-corrected without public scandal. But they also learned: deep tech promises require caveating.</p>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  NM4 · Failure Pattern" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 52px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+    <div style="width:3px;height:28px;background:#EF9F27;border-radius:2px;flex-shrink:0"></div>
+    <p style="font-family:'DM Mono',monospace;font-size:0.32em;color:#EF9F27;margin:0;text-transform:uppercase;letter-spacing:0.12em">Governance Failure Pattern</p>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 16px;font-size:1.5em">Why JPMorgan's Governance Slipped</h3>
+  <div style="flex:1;display:grid;grid-template-columns:1fr 1fr;gap:14px">
+    <div style="background:#141a22;border-left:3px solid #E24B4A;padding:12px;border-radius:6px">
+      <p style="font-family:'DM Mono',monospace;font-size:0.30em;color:#E24B4A;margin:0 0 8px;font-weight:700">CEO/Board Misalignment</p>
+      <p style="font-size:0.40em;color:#e8eaed;margin:0">Dimon wanted to signal "JPMorgan is innovative." Board wanted proof of concept. Neither asked: "When can we actually USE this?"</p>
+    </div>
+    <div style="background:#141a22;border-left:3px solid #E24B4A;padding:12px;border-radius:6px">
+      <p style="font-family:'DM Mono',monospace;font-size:0.30em;color:#E24B4A;margin:0 0 8px;font-weight:700">Measurement Problem</p>
+      <p style="font-size:0.40em;color:#e8eaed;margin:0">Measured "papers published" and "partnerships," not "actual competitive advantage." Classic: measurable ≠ meaningful.</p>
+    </div>
+    <div style="background:#141a22;border-left:3px solid #E24B4A;padding:12px;border-radius:6px">
+      <p style="font-family:'DM Mono',monospace;font-size:0.30em;color:#E24B4A;margin:0 0 8px;font-weight:700">Hardware Assumption</p>
+      <p style="font-size:0.40em;color:#e8eaed;margin:0">Assumed quantum hardware (IBM, Rigetti) would improve faster than it did. Wrong assumption → overstated timeline.</p>
+    </div>
+    <div style="background:#141a22;border-left:3px solid #E24B4A;padding:12px;border-radius:6px">
+      <p style="font-family:'DM Mono',monospace;font-size:0.30em;color:#E24B4A;margin:0 0 8px;font-weight:700">No Feedback Loop</p>
+      <p style="font-size:0.40em;color:#e8eaed;margin:0">No mechanism to kill the narrative when reality didn't match. Narrative and facts diverged. Course-correction happened through inertia, not governance.</p>
+    </div>
+  </div>
+  <div style="border-top:1px solid #2a3342;padding-top:12px;margin-top:12px">
+    <p style="font-size:0.36em;color:#8b95a5;margin:0"><strong>Lesson:</strong> Even smart institutions (JPMorgan, serious scientists) can misalign narrative with feasibility. Governance requires: clear scope, honest measurement, active feedback loops, and permission to revise.</p>
+  </div>
+</div>
+</section>
+
+<section data-background-color="#0b0f14" data-bc="W2  ·  NM4 · Open Questions" data-transition="fade">
+<div style="display:flex;flex-direction:column;height:100%;padding:24px 52px;box-sizing:border-box">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px">
+    <div style="width:3px;height:28px;background:#AFA9EC;border-radius:2px;flex-shrink:0"></div>
+    <p style="font-family:'DM Mono',monospace;font-size:0.32em;color:#AFA9EC;margin:0;text-transform:uppercase;letter-spacing:0.12em">For Your Judgment</p>
+  </div>
+  <h3 style="color:#e8eaed;margin:0 0 16px;font-size:1.5em">Why Is This a Near-Miss and Not a Failure?</h3>
+  <ul style="list-style:none;padding:0;margin:0;flex:1;font-size:0.42em;color:#e8eaed;line-height:1.7">
+    <li style="margin-bottom:10px">
+      <strong style="color:#EF9F27">✓ Investment was real:</strong> JPMorgan didn't promise without research. They built actual systems and published results.
+    </li>
+    <li style="margin-bottom:10px">
+      <strong style="color:#85B7EB">✓ Timeline was wrong, not strategy:</strong> The goal (quantum advantage) is still 10–15 years valid. They just misjudged when.
+    </li>
+    <li style="margin-bottom:10px">
+      <strong style="color:#5DCAA5">✓ They course-corrected:</strong> Unlike Theranos (F15), JPMorgan didn't hide results. They changed narrative quietly (weak governance, but honest).
+    </li>
+    <li>
+      <strong style="color:#AFA9EC">✓ No customer harm:</strong> This was internal R&D, not sold as a product with false claims.
+    </li>
+  </ul>
+  <div style="background:#141a22;border:1px solid #2a3342;border-radius:6px;padding:12px;margin-top:16px">
+    <p style="font-size:0.36em;color:#8b95a5;margin:0"><strong>Reflection:</strong> Is JPMorgan's course-correction a sign of mature governance (learning when wrong) or weak governance (no one called them out)? What would better governance have looked like?</p>
+  </div>
+</div>
+</section>
+
+
+
 <section data-background-color="#0b0f14" data-bc="W2  ·  Part 3" data-transition="fade">
 <div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:40px 80px;text-align:center">
   <p style="font-family:'DM Mono',monospace;font-size:0.34em;color:#4a5568;text-transform:uppercase;letter-spacing:0.18em;margin:0 0 14px">Part 3 of 4</p>
@@ -2288,5 +2870,8 @@ document.addEventListener('DOMContentLoaded',function(){
   });
 });
 </script>
+
+</div>
+</div>
 </body>
 </html>
